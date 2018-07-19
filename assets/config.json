@@ -1,0 +1,9 @@
+{
+    "TOKEN": "secret",
+    "YT_API_TOKEN": "secret",
+    "PREFIX": "!",
+    "log_channel": "logs",
+    "report_channel": "reports",
+    "locked_channel": " ",
+    "newbie_channel": "verificare"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "omniprezentul",
+  "version": "0.0.1",
+  "description": "Sunt peste tot si nicaieri.",
+  "main": "bot.js",
+  "author": "HaZZe",
+  "license": "MIT",
+  "dependencies": {
+    "dankmemes": "^1.0.0",
+    "discord.js": "^11.3.0",
+    "moment": "^2.22.2",
+    "opusscript": "0.0.6",
+    "simple-youtube-api": "^5.0.2",
+    "ytdl-core": "^0.21.0"
+  }
+}
