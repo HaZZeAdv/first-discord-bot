@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js'),
 
 exports.run = async (client, message, args, color) => {
   
-  let m = await message.channel.send(`*Please Wait...*`);
+  let m = await;
   try {
   const { body } = await get('https://api-to.get-a.life/meme')
 
