@@ -3,7 +3,6 @@ const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Nu ai nivelul administrativ necesar.");
-    if(!args[0]) return message.channel.send("Utilizare: **!mute @mention <time(s/m/h)>**");
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
     //>tempmute @user 1s/m/h/d
