@@ -70,6 +70,7 @@ bot.on("message", async message => {
 bot.on('messageDelete', async (message) => {
     if(bannedWords.some(word => message.content.includes(word))) return;
     if(message.content.includes("report")) return;
+    if(message.content.includes("Aşteaptă")) return;
     if(message.channel.name == locked_channel || message.channel.name == newbie_channel) return;
     Logging.logMessageDelete(bot, message);
 });
