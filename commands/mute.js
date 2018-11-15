@@ -4,7 +4,7 @@ const Logging = require('../assets/logging.js');
 const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) returnFunct.error(message, "Nu ai nivelul administrativ necesar.");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return Funct.error(message, "Nu ai nivelul administrativ necesar.");
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
     //>tempmute @user 1s/m/h/d
@@ -37,12 +37,10 @@ module.exports.run = async (bot, message, args) => {
 
      await(tomute.addRole(muterole.id));
      Logging.logUserMute(bot, message, `<@${tomute.id}>`, mutetime);
-     message.channel.send(`<@${tomute.id}> a primit mute pentru ${ms(ms(mutetime), {long: true})}.`);
 
      setTimeout(function(){
         tomute.removeRole(muterole.id);
-         Logging.logUserMute(bot, message, `<@${tomute.id}>`.id);
-        message.channel.send(`<@${tomute.id}> nu mai are mute.`);
+         Logging.logUserUnMute(bot, message, `<@${tomute.id}>`);
      }, ms(mutetime));
 
  }
