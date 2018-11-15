@@ -47,7 +47,6 @@ module.exports = {
             .setAuthor("Mesaj şters | " + message.channel.name, bot.user.avatarURL)
             .addField("Mesaj:", message.content)
             .addField("Trimis de", message.author.tag)
-            .addField("Şters de", executor)
             .setColor("#ff6a00")
             .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/bin-icon.png")
             .setTimestamp()
