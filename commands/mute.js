@@ -47,5 +47,8 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.help = {
-    name: "mute"
+    name: "mute",
+    type: "admin",
+    desc: "Dă mute unui jucător în cazul în care vorbeşte porcos.",
+    usage: "mute @mention"
 }
