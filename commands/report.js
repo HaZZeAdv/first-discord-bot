@@ -11,14 +11,14 @@ module.exports.run = async (bot, message, args) => {
   let Reason = args.join(" ").slice(22);
   if(!Reason) return Funct.error(message, "Specifică motivul.");
   let reportEmbed = new Discord.RichEmbed()
-  .setAuthor("Report", bot.user.avatarURL)
-  .addField("Mesaj", Reason)
-  .addField("Utilizator raportat", `${reportedUser}`)
-  .addField("Raportat de", `${message.author}`)
-  .addField("Canal", message.channel)
   .setColor("#ff6a00")
   .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/problem-2-icon.png")
   .setTimestamp()
+  .setAuthor("Report", bot.user.avatarURL)
+  .addField("Mesaj", Reason)
+  .addField("Utilizator raportat esteeeeee", `${reportedUser}`)
+  .addField("Raportat de", `${message.author}`)
+  .addField("Canal", message.channel)
   .setFooter("Raport nerezolvat");
   let reportschannel = message.guild.channels.find(`name`, report_channel);
   if(!reportschannel) return Funct.error(message, "Canalul pentru reporturi nu există.");
@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
         .setAuthor("Report", bot.user.avatarURL)
         .addField("Mesaj", Reason)
         .addField("Utilizator raportat", `${reportedUser}`)
-        .addField("Raportat de", `${message.author}`)
+        .addField("Raportat de utilizatorul", `${message.author}`)
         .addField("Canal", message.channel)
         .setColor("#1ABC9C")
         .setThumbnail("http://icons.iconarchive.com/icons/graphicloads/polygon/128/check-icon.png")
