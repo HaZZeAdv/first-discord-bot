@@ -1,7 +1,7 @@
 
 module.exports.run = async (bot, message, args) => {
     if(args.length < 1) return;
-    if(message.member.roles.some(r=>["Dictator", "Manager", "Organizator"].includes(r.name)) ) {
+    if(message.member.roles.some(r=>["Şefu' ăla blanao", "Pizdar", "Şefu' la bani"].includes(r.name)) ) {
         key = args.join(" ");
         message.member.guild.channels.find("name", "giveaways").send("@everyone " + key);
     }
