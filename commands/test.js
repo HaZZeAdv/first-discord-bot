@@ -41,8 +41,8 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "report",
+  name: "test",
   type: "user",
   desc: "Raportează pe cineva că a încălcat regulile.",
-  usage: "report <@mention> <reason>"
+  usage: "test <@mention> <reason>"
 }
