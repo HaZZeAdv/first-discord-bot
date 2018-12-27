@@ -11,8 +11,8 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 	//console.log(video);
 	const song = {
 		id: video.id,
-		title: Util.escapeMarkdown(video.title),
-		url: `https://youtu.be/3jzPbF17GFc`
+		title: `Fuego - Colinde`,
+		url: `https://youtube.com/watch?&v=3jzPbF17GFc`
 	};
 	if (!serverQueue) {
 		const queueConstruct = {
