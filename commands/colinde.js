@@ -71,7 +71,7 @@ function play(guild, song) {
 module.exports.run = async (bot, message, args) => {
     const voiceChannel = message.member.voiceChannel;
     const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
-    if(args.length < 1) return;
+    if(args.length < 0) return;
 		if (!voiceChannel) return message.channel.send('Nu eşti într-un canal vocal.');
 		const permissions = voiceChannel.permissionsFor(message.client.user);
 		if (!permissions.has('CONNECT')) {
