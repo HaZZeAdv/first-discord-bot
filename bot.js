@@ -22,7 +22,7 @@ fs.readdir("./commands/", (err, files) => {
 
 // Bot connection
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Fuego - Colinde', type: 3 } });//Watching 
+    bot.user.setPresence({ game: { name: 'Colinde', type: 2 } });//Watching 
     bot.user.setStatus('dnd');
     console.log(`[SYSTEM] La cum arata totul, presupun ca ai reusit.`);
 });
