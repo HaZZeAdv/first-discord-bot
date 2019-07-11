@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
       const reaction = collected.first();
       if (reaction.emoji.name === agree) {
         msg.delete()
-        let role = message.guild.roles.find("name", "Gamer");
+        let role = message.guild.roles.find("name", "Ucenic");
         let member = message.member;
         member.addRole(role).catch(console.error);
         const Welcome = [
@@ -34,10 +34,10 @@ module.exports.run = async (bot, message, args) => {
           "a fost târâz aici, să-l întâmpinăm cum se cuvine.",
           "tocmai a trecut de verificare, nu e prost.",
           "a venit însfârşit.",
-          "este acum un Gamer oficial."
+          "este acum un Ucenic."
         ];
         let WelcomeMessage = Welcome[Math.floor(Math.random()*Welcome.length)];
-        member.guild.channels.find("name", "discuţii").send(member.toString() + " " + WelcomeMessage);
+        member.guild.channels.find("name", "chat").send(member.toString() + " " + WelcomeMessage);
 
       } else return;
   })
