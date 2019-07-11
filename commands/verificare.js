@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
           "este acum un Ucenic."
         ];
         let WelcomeMessage = Welcome[Math.floor(Math.random()*Welcome.length)];
-        member.guild.channels.find("name", "chat").send(member.toString() + " " + WelcomeMessage);
+        member.guild.channels.find("name", "discuţii").send(member.toString() + " " + WelcomeMessage);
 
       } else return;
   })
